@@ -1,0 +1,5 @@
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/build/CMakeFiles/edit_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/build/CMakeFiles/ranger_lib.dir
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/build/CMakeFiles/assignment2.dir
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/build/CMakeFiles/doc.dir
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/build/CMakeFiles/rebuild_cache.dir

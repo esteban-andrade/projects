@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/main.cpp
+iostream
+-
+vector
+-
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/rectangle.h
+triangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/triangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/rectangle.cpp
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/rectangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/rectangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.cpp
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.h
+string
+-
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/triangle.cpp
+triangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/triangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/triangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/starter/shapes/shape.h
+

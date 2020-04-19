@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz3/b/deque_vector_ops.cpp
+iostream
+-
+deque
+-
+chrono
+-
+random
+-
+vector
+-
+

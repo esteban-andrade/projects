@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/hyperspectral_camera/hyperspectral.cpp
+hyperspectral.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/hyperspectral_camera/hyperspectral.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/hyperspectral_camera/hyperspectral.h
+random
+-
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/hyperspectral_camera/hyperspectral_camera.cpp
+iostream
+-
+chrono
+-
+thread
+-
+hyperspectral.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/hyperspectral_camera/hyperspectral.h
+

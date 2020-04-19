@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/line.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/main.cpp
+iostream
+-
+vector
+-
+thread
+-
+chrono
+-
+array
+-
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/rectangle.h
+triangle.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/triangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/shape.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/rectangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/shape.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/shape.h
+string
+-
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/triangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/shape.h
+line.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week04/examples/ex01-03/line.h
+

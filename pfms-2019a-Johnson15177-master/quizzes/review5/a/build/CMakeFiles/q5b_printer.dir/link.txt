@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -pthread   CMakeFiles/q5b_printer.dir/printer.cpp.o  -o q5b_printer -rdynamic 

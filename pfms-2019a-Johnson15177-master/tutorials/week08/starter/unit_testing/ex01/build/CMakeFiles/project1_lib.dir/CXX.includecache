@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex01/project1.cpp
+project1.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex01/project1.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex01/project1.h
+cmath
+-
+

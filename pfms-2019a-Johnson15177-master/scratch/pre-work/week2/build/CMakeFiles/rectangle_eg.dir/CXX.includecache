@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/pre-work/week2/rectangle.cpp
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/pre-work/week2/rectangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/pre-work/week2/rectangle.h
+iostream
+-
+cmath
+-
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/pre-work/week2/rectangle_main.cpp
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/pre-work/week2/rectangle.h
+iostream
+-
+

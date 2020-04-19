@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/review1/a/main.cpp
+person.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/review1/a/person.h
+iostream
+-
+vector
+-
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/review1/a/person.cpp
+person.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/review1/a/person.h
+string
+-
+iostream
+-
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/review1/a/person.h
+string
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/hyperspec.dir/hyperspectral_camera.cpp.o CMakeFiles/hyperspec.dir/hyperspectral.cpp.o  -o hyperspec -rdynamic 

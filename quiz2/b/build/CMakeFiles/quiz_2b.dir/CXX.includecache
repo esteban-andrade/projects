@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/car.cpp
+car.h
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/car.h
+cmath
+-
+iostream
+-
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/car.h
+string
+-
+controllerinterface.h
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/controllerinterface.h
+chrono
+-
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/controllerinterface.cpp
+controllerinterface.h
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/controllerinterface.h
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/controllerinterface.h
+string
+-
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/main.cpp
+car.h
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz2/b/car.h
+iostream
+-
+thread
+-
+vector
+-
+

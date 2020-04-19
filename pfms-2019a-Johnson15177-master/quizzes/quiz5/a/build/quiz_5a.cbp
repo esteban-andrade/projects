@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="quiz_5a" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_printer">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_printer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_printer" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_printer/fast">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_printer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_printer/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_fibonacci">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_fibonacci" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_fibonacci" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_fibonacci/fast">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_fibonacci" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_fibonacci/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_generator">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_generator" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_generator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="q5b_generator/fast">
+         <Option output="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/q5b_generator" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 q5b_generator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/fibonacci.cpp">
+         <Option target="q5b_fibonacci"/>
+      </Unit>
+      <Unit filename="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/generator.cpp">
+         <Option target="q5b_generator"/>
+      </Unit>
+      <Unit filename="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/printer.cpp">
+         <Option target="q5b_printer"/>
+      </Unit>
+      <Unit filename="/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz5/a/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

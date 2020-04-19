@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/assignment.h
+iostream
+-
+vector
+-
+chrono
+-
+random
+-
+thread
+-
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/matrix.cpp
+assignment.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/assignment.h
+

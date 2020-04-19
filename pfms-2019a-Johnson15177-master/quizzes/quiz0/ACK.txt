@@ -1,0 +1,7 @@
+This is an acknowledgment that your quiz was detected as valid, with changes via reflog
+3865b85 refs/remotes/origin/master@{Mon Mar 18 12:07:41 2019}: pull: fast-forward
+50cd612 refs/remotes/origin/master@{Thu Mar 14 10:41:27 2019}: pull: fast-forward
+be170ab refs/remotes/origin/master@{Thu Mar 14 09:14:04 2019}: pull: fast-forward
+c8f2d43 refs/remotes/origin/master@{Tue Mar 12 22:52:04 2019}: update by push
+63e0f88 
+Quiz has been dispatched for review on : Monday 18 March  12:15:10 AEDT 2019

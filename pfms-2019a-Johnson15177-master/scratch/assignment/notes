@@ -1,0 +1,60 @@
+// RAY TRACING TUTORIAL
+
+/*		Before going through it, you have to understand what raytracing is.
+ *		The concept of ray tracing refers to drawing out 'rays' (lines) from
+ *		a singular point, and then observing those lines for various characteristics
+ *
+ *		In out case, the rays will be drawn from the goal pose, in a 180 degree
+ *		cone. The cones will increment [laser angle increment - attained from code]
+ */
+
+// So how do we actually do it?
+
+/*		Line iterators are an easy way to implement ray tracing. Line iterators
+ *		DO NOT require you to draw the line, what they require is:
+ *
+ *		args: [image] , [point 1] , [point 2]
+ *
+ *		So, understanding this, lets find our data. We have point 1 being the goal
+ *		pose of the robot (you should have this worked out!)
+ *
+ *		So point 2 is the target point which we need to calculate. Have a think
+ *		about this and how we could find it.
+ *
+ *		Using trig, we can find the [x , y] co-ordinates by using the maximum range
+ *		of the laser, multiplied by sin[current angle + angle increment]
+ *
+ */
+
+// Putting this in terms of code, we can get something like this...
+
+for [loop through angle increments from 0 to 180 << call this angle i]
+{
+	[angle being observed] = i + [goal orientation]
+	// Do you understand what this is doing? ^^^
+	// This is adding angle of radar to goal pose of bot, so that the angle
+	// is firing out from the bot at the right orientation
+
+	// Now we find our [x , y] points
+	[x] = [max laser range] * [sin([angle being observed])] * 10 + [goal position x]
+	// HERE : understand that we *10 to convert the max range meter to a dist.
+	// relative to pixels. Also, add goal position to ensure the X is from the ROBOT
+	// not from the corner of the IMAGE
+
+	// With this found, create the line iterator
+	cv::LineIterator [name]([image], [point 1], [point 2]);
+
+	// Now loop through the line iterator like in TUTORIAL
+	for (int c = 0; c < [name].count; c++, [name]++)
+	{
+		// Here is tricky, so i'll just give the code as from tut
+		cv::Vec3b *[name of individual pixel] = (cv::Vec3b*)*[name] <line it name
+		
+		// Now just compare pixel to Vec3b
+		if (*[name of individual pixel] == red)
+		{
+			blue
+		}
+	}
+}
+

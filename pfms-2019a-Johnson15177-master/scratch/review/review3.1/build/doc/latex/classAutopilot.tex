@@ -1,0 +1,87 @@
+\hypertarget{classAutopilot}{}\section{Autopilot Class Reference}
+\label{classAutopilot}\index{Autopilot@{Autopilot}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Autopilot} (std\+::shared\+\_\+ptr$<$ \hyperlink{classSimulator}{Simulator} $>$)\hypertarget{classAutopilot_ab4999cb0e76b43182d2b72beae7073d0}{}\label{classAutopilot_ab4999cb0e76b43182d2b72beae7073d0}
+
+\item 
+void \hyperlink{classAutopilot_a48d0013f0c3b3e29b29ace2e0708f4b9}{set\+Bogie\+Pose} (void)
+\item 
+\hyperlink{structPose}{Pose} \hyperlink{classAutopilot_a092b6d16d01bb00027cdfaabea6fadc9}{get\+Bogie\+Pose} (void)
+\item 
+void \hyperlink{classAutopilot_a11b9337bd82678feae2405a2976a1844}{set\+Pursue} (double targetX, double targetY)
+\item 
+double \hyperlink{classAutopilot_a1bc61b618b8584d23943b8825e24dcca}{get\+Ang\+Control} (void)
+\item 
+double \hyperlink{classAutopilot_abadd59231cddc9e05965df5718f3c212}{get\+Lin\+Control} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\index{Autopilot@{Autopilot}!get\+Ang\+Control@{get\+Ang\+Control}}
+\index{get\+Ang\+Control@{get\+Ang\+Control}!Autopilot@{Autopilot}}
+\subsubsection[{\texorpdfstring{get\+Ang\+Control(void)}{getAngControl(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double Autopilot\+::get\+Ang\+Control (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAutopilot_a1bc61b618b8584d23943b8825e24dcca}{}\label{classAutopilot_a1bc61b618b8584d23943b8825e24dcca}
+This function gets the angular velocity to contol the friendly.
+
+\begin{DoxyReturn}{Returns}
+double -\/ Angular velocity to control friendly. 
+\end{DoxyReturn}
+\index{Autopilot@{Autopilot}!get\+Bogie\+Pose@{get\+Bogie\+Pose}}
+\index{get\+Bogie\+Pose@{get\+Bogie\+Pose}!Autopilot@{Autopilot}}
+\subsubsection[{\texorpdfstring{get\+Bogie\+Pose(void)}{getBogiePose(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pose} Autopilot\+::get\+Bogie\+Pose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAutopilot_a092b6d16d01bb00027cdfaabea6fadc9}{}\label{classAutopilot_a092b6d16d01bb00027cdfaabea6fadc9}
+This function compares the current range between an estimated bogie position and friendly position with the previous bogie position and friendly position. If the previous range happens to be larger than the current position then the fucntion will return the second estimated bogie pose. Otherwise the first estimated bogie pose is returned.
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPose}{Pose} -\/ The bogies\textquotesingle{}s x, y position (metres) and orientation (radians). 
+\end{DoxyReturn}
+\index{Autopilot@{Autopilot}!get\+Lin\+Control@{get\+Lin\+Control}}
+\index{get\+Lin\+Control@{get\+Lin\+Control}!Autopilot@{Autopilot}}
+\subsubsection[{\texorpdfstring{get\+Lin\+Control(void)}{getLinControl(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double Autopilot\+::get\+Lin\+Control (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAutopilot_abadd59231cddc9e05965df5718f3c212}{}\label{classAutopilot_abadd59231cddc9e05965df5718f3c212}
+This function gets the linear velocity to contol the friendly.
+
+\begin{DoxyReturn}{Returns}
+double -\/ Linear velocity to control friendly. 
+\end{DoxyReturn}
+\index{Autopilot@{Autopilot}!set\+Bogie\+Pose@{set\+Bogie\+Pose}}
+\index{set\+Bogie\+Pose@{set\+Bogie\+Pose}!Autopilot@{Autopilot}}
+\subsubsection[{\texorpdfstring{set\+Bogie\+Pose(void)}{setBogiePose(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autopilot\+::set\+Bogie\+Pose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classAutopilot_a48d0013f0c3b3e29b29ace2e0708f4b9}{}\label{classAutopilot_a48d0013f0c3b3e29b29ace2e0708f4b9}
+This function takes range readings from base to bogie and friendly to bogie and uses the intersection of circles to determine two possible bogie locations. \index{Autopilot@{Autopilot}!set\+Pursue@{set\+Pursue}}
+\index{set\+Pursue@{set\+Pursue}!Autopilot@{Autopilot}}
+\subsubsection[{\texorpdfstring{set\+Pursue(double target\+X, double target\+Y)}{setPursue(double targetX, double targetY)}}]{\setlength{\rightskip}{0pt plus 5cm}void Autopilot\+::set\+Pursue (
+\begin{DoxyParamCaption}
+\item[{double}]{targetX, }
+\item[{double}]{targetY}
+\end{DoxyParamCaption}
+)}\hypertarget{classAutopilot_a11b9337bd82678feae2405a2976a1844}{}\label{classAutopilot_a11b9337bd82678feae2405a2976a1844}
+This function determines the orientation the friendly needs to point towards in order to get to the estimated bogie position. The angle is found using inverse tan. Once the angle is found, the function then determines the difference in which it must turn based on four separate cases. This function also sets the linear and angular velocities to max based on if the friendly is turning or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em targetX} & the bogie\textquotesingle{}s estimated x position. \\
+\hline
+{\em targetY} & the bogie\textquotesingle{}s estimated y position. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/user/git/pfms-\/2019a-\/\+Johnson15177/scratch/review/review3.\+1/autopilot.\+h\item 
+/home/user/git/pfms-\/2019a-\/\+Johnson15177/scratch/review/review3.\+1/autopilot.\+cpp\end{DoxyCompactItemize}

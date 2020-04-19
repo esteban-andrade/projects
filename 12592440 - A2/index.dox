@@ -1,0 +1,17 @@
+/*!
+
+*/
+
+// without this gap between two doxygen definition, the last group does not get
+// populated properly for some reason.
+
+/*!
+@mainpage Martin Lym Utilisation of Multiple Sensors
+
+Student Name: Martin Elveinaldi Lym
+Student ID: 12592440
+Grade: HD (hopefully)
+
+@section
+
+

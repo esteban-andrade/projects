@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/main.cpp
+iostream
+-
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/rectangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/rectangle.cpp
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/rectangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/rectangle.h
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/shape.h
+iostream
+-
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/shape.cpp
+shape.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/shape.h
+rectangle.h
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/rectangle.h
+
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz1/b/shape.h
+string
+-
+

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusion.cpp
+rangerfusion.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusion.h
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerinterface.h
+vector
+-
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusion.h
+vector
+-
+rangerfusioninterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusioninterface.h
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerinterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusioninterface.cpp
+rangerfusioninterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusioninterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerfusioninterface.h
+vector
+-
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerinterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/assignment/a2attempt2/rangerinterface.h
+vector
+-
+

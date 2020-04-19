@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/tutorial/week5/graph_search/graph_search.cpp
+iostream
+-
+vector
+-
+stack
+-
+set
+-
+queue
+-
+map
+-
+algorithm
+-
+

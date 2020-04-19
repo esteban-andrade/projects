@@ -1,0 +1,3 @@
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz4/a/build/CMakeFiles/edit_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz4/a/build/CMakeFiles/rebuild_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/quizzes/quiz4/a/build/CMakeFiles/q4a.dir

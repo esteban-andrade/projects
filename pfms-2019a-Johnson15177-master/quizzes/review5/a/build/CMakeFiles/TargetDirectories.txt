@@ -1,0 +1,5 @@
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/build/CMakeFiles/edit_cache.dir
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/build/CMakeFiles/q5b_printer.dir
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/build/CMakeFiles/q5b_fibonacci.dir
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/build/CMakeFiles/q5b_generator.dir
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/build/CMakeFiles/rebuild_cache.dir

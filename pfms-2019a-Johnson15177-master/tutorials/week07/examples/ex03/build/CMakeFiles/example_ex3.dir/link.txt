@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11 -pthread   CMakeFiles/example_ex3.dir/main.cpp.o CMakeFiles/example_ex3.dir/sample.cpp.o CMakeFiles/example_ex3.dir/consumer.cpp.o CMakeFiles/example_ex3.dir/producer.cpp.o  -o example_ex3 -rdynamic 

@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/PMS/pfms-2019a-asherk03/quizzes/quiz5/a/fibonacci.cpp
+thread
+-
+chrono
+-
+iostream
+-
+queue
+-
+mutex
+-
+condition_variable
+-
+

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/tutorial/week6/part2/main.cpp
+deque
+-
+functional
+-
+iostream
+-
+fstream
+-
+thread
+-
+string
+-
+mutex
+-
+condition_variable
+-
+chrono
+-
+

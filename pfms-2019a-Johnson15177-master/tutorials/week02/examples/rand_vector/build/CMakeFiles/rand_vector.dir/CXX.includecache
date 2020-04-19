@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week02/examples/rand_vector/rand_vector.cpp
+iostream
+-
+vector
+-
+chrono
+-
+randomvectorfiller.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week02/examples/rand_vector/randomvectorfiller.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week02/examples/rand_vector/randomvectorfiller.cpp
+randomvectorfiller.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week02/examples/rand_vector/randomvectorfiller.h
+random
+-
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week02/examples/rand_vector/randomvectorfiller.h
+vector
+-
+random
+-
+

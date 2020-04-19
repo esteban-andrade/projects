@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfusion_lib.a  CMakeFiles/fusion_lib.dir/rangerfusioninterface.cpp.o CMakeFiles/fusion_lib.dir/rangerfusion.cpp.o
+/usr/bin/ranlib libfusion_lib.a

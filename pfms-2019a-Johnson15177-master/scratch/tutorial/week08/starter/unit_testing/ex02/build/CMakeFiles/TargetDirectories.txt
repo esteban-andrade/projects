@@ -1,0 +1,11 @@
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/edit_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/sensor_lib.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/ex02.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/test.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/rawTests.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/CMakeFiles/rebuild_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/lib/gtest-1.6.0/CMakeFiles/test.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/lib/gtest-1.6.0/CMakeFiles/gtest_main.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/lib/gtest-1.6.0/CMakeFiles/edit_cache.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/lib/gtest-1.6.0/CMakeFiles/gtest.dir
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week08/starter/unit_testing/ex02/build/lib/gtest-1.6.0/CMakeFiles/rebuild_cache.dir

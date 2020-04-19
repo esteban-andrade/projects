@@ -1,0 +1,29 @@
+/*!
+
+*/
+
+// without this gap between two doxygen definition, the last group does not get
+// populated properly for some reason.
+
+/*!
+@mainpage 41012 Assignment 2 Ranger Library
+
+A library that facilitates the creation of a virtual laser and a series of virtual radars, and has the capability of fusing the readings together.
+
+Three methods fusion methods are available:
+- Minimum value: selects the lowest reading value for each position
+- Maximum value: selects the largest reading value for each position
+- Average value: averages all the readings at each position
+
+@section Usage
+
+1. Create one Laser and any number of Radar objects.
+2. Optionally change the laser's angular resolution or the radar's offset using setAngularResolution() and setOffset().
+3. Create a vector of RangerInterface pointers which point to the laser and radar objects.
+4. Create a RangerFusion object.
+5. Use setRangers() to pass the vector created in Step 3 to the RangerFusion object.
+6. Optionally use setFusionMethod() to change the fusion method.
+7. Use getRawRangeData() to generate raw sensor data for all sensors.
+8. Use getFusedRangeData() to generate fused data from the data generated in Step 7.
+
+*/

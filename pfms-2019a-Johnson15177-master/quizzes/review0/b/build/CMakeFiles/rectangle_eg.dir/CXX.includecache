@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nate/git/pfms-2019a-chrisnguyen1403/quizzes/quiz0/b/rectangle.cpp
+rectangle.h
+/home/nate/git/pfms-2019a-chrisnguyen1403/quizzes/quiz0/b/rectangle.h
+
+/home/nate/git/pfms-2019a-chrisnguyen1403/quizzes/quiz0/b/rectangle.h
+iostream
+-
+cmath
+-
+
+/home/nate/git/pfms-2019a-chrisnguyen1403/quizzes/quiz0/b/rectangle_main.cpp
+rectangle.h
+/home/nate/git/pfms-2019a-chrisnguyen1403/quizzes/quiz0/b/rectangle.h
+iostream
+-
+

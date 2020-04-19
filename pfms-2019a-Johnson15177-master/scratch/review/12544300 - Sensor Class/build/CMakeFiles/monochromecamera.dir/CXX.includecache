@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/12544300 - Sensor Class/main.cpp
+iostream
+-
+limits
+-
+vector
+-
+unistd.h
+-
+monochromecamera.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/12544300 - Sensor Class/monochromecamera.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/12544300 - Sensor Class/monochromecamera.cpp
+iostream
+-
+random
+-
+chrono
+-
+limits
+-
+vector
+-
+monochromecamera.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/12544300 - Sensor Class/monochromecamera.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/12544300 - Sensor Class/monochromecamera.h
+iostream
+-
+vector
+-
+

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week07/examples/ex02/main.cpp
+iostream
+-
+thread
+-
+chrono
+-
+random
+-
+algorithm
+-
+sample.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week07/examples/ex02/sample.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week07/examples/ex02/sample.cpp
+sample.h
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week07/examples/ex02/sample.h
+
+/home/user/git/pfms-2019a-Johnson15177/tutorials/week07/examples/ex02/sample.h
+condition_variable
+-
+mutex
+-
+vector
+-
+

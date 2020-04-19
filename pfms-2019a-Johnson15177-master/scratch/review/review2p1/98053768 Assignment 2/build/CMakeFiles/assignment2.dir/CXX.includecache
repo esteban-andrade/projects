@@ -1,0 +1,64 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/laser.h
+ranger.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/ranger.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/main.cpp
+chrono
+-
+iomanip
+-
+iostream
+-
+string
+-
+thread
+-
+vector
+-
+laser.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/laser.h
+radar.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/radar.h
+rangerfusion.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerfusion.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/radar.h
+ranger.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/ranger.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/ranger.h
+chrono
+-
+random
+-
+string
+-
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerinterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerfusion.h
+vector
+-
+rangerfusioninterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerfusioninterface.h
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerinterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerfusioninterface.h
+vector
+-
+rangerinterface.h
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerinterface.h
+
+/home/user/git/pfms-2019a-Johnson15177/scratch/review/review2p1/98053768 Assignment 2/rangerinterface.h
+vector
+-
+

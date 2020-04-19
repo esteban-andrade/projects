@@ -1,0 +1,266 @@
+\hypertarget{classSimulator}{}\section{Simulator Class Reference}
+\label{classSimulator}\index{Simulator@{Simulator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSimulator_a62ab66763cb9e6cccbe88d45ab55547f}{Simulator} (void)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classSimulator}{Simulator} constructor. \end{DoxyCompactList}\item 
+std\+::thread \hyperlink{classSimulator_a19ad57d2e32486e1cce2d8702060d930}{spawn} (void)
+\begin{DoxyCompactList}\small\item\em Returns the simulation thread. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulator_ae88ecc16eb03836e8b4a355836d7500b}{stop} (void)\hypertarget{classSimulator_ae88ecc16eb03836e8b4a355836d7500b}{}\label{classSimulator_ae88ecc16eb03836e8b4a355836d7500b}
+
+\begin{DoxyCompactList}\small\item\em Stops the running simulation thread when invoked. \end{DoxyCompactList}\item 
+long \hyperlink{classSimulator_acd0a0ca3e9d25ea92ffc05e14b77c5e6}{elapsed} (void)
+\begin{DoxyCompactList}\small\item\em Gets the elapsed time since the simulation started. \end{DoxyCompactList}\item 
+\hyperlink{structPose}{Pose} \hyperlink{classSimulator_ab498029a37713969af417acfa7208d08}{get\+Friendly\+Pose} (void)
+\begin{DoxyCompactList}\small\item\em Return the friendly aircraft\textquotesingle{}s pose. \end{DoxyCompactList}\item 
+double \hyperlink{classSimulator_a17d07e629ef87450d91d960c2e6b231e}{get\+Friendly\+Linear\+Velocity} (void)
+\begin{DoxyCompactList}\small\item\em Return the friendly aircraft\textquotesingle{}s linear velocity. \end{DoxyCompactList}\item 
+double \hyperlink{classSimulator_a054241a50cbf232b71acdaf4290855d3}{get\+Friendly\+Angular\+Velocity} (void)
+\begin{DoxyCompactList}\small\item\em Return the friendly aircraft\textquotesingle{}s angular velocity. \end{DoxyCompactList}\item 
+bool \hyperlink{classSimulator_adb1cff57466c3b03fd738036cb9cee63}{control\+Friendly} (double linear\+\_\+velocity, double angular\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Update the linear and angular velocity of the friendly aircraft. \end{DoxyCompactList}\item 
+\hyperlink{structRangeStamped}{Range\+Stamped} \hyperlink{classSimulator_abcd7cee64a0df0e4c5cbb3bbca719d16}{range\+To\+Bogie\+From\+Base} (void)
+\begin{DoxyCompactList}\small\item\em Returns the range from the base station to the bogie. \end{DoxyCompactList}\item 
+\hyperlink{structRangeStamped}{Range\+Stamped} \hyperlink{classSimulator_aa41aef7b8b1e79876dd5d05aef1376ae}{range\+To\+Bogie\+From\+Friendly} (void)
+\begin{DoxyCompactList}\small\item\em Returns the range from the friendly aircraft to the bogie. \end{DoxyCompactList}\item 
+void \hyperlink{classSimulator_a29cf802d6785897f2e5c134a7f440398}{test\+Pose} (\hyperlink{structPose}{Pose} pose)
+\begin{DoxyCompactList}\small\item\em Will render a test aircraft within the airspace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classSimulator_a1f33cdccada9c6cf034b9cf9d94e3d1e}{distance} (\hyperlink{structGlobalOrd}{Global\+Ord} o1, \hyperlink{structGlobalOrd}{Global\+Ord} o2)
+\begin{DoxyCompactList}\small\item\em Calculates the euclidean distance between two coordiantes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \hyperlink{classSimulator_ad903010cfc404794ecfbb2f8903b15ae}{V\+\_\+\+T\+E\+RM}
+\item 
+static const unsigned int \hyperlink{classSimulator_a798658490c9deedf3eeb62278308d2b3}{M\+A\+X\+\_\+G}
+\item 
+static const double \hyperlink{classSimulator_ad97409c332a5e261056ee47b84ba5e72}{M\+A\+X\+\_\+V}
+\item 
+static const double \hyperlink{classSimulator_af702e54e90c0fecb27f270890d41442c}{A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}
+\item 
+static const \hyperlink{structGlobalOrd}{Global\+Ord} \hyperlink{classSimulator_a4a32de8a20938532139a6746499d7285}{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC}
+\item 
+static const unsigned int \hyperlink{classSimulator_a901e2a4bee11e07d7276857f95e88f50}{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}
+\item 
+static const unsigned int \hyperlink{classSimulator_a6ed76930f7f1efb8396ffd05189ed000}{F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\index{Simulator@{Simulator}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{Simulator(void)}{Simulator(void)}}]{\setlength{\rightskip}{0pt plus 5cm}Simulator\+::\+Simulator (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_a62ab66763cb9e6cccbe88d45ab55547f}{}\label{classSimulator_a62ab66763cb9e6cccbe88d45ab55547f}
+
+
+\hyperlink{classSimulator}{Simulator} constructor. 
+
+Will randomly intialise the position of the bogie and friendly within the airspace. 
+
+\subsection{Member Function Documentation}
+\index{Simulator@{Simulator}!control\+Friendly@{control\+Friendly}}
+\index{control\+Friendly@{control\+Friendly}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{control\+Friendly(double linear\+\_\+velocity, double angular\+\_\+velocity)}{controlFriendly(double linear_velocity, double angular_velocity)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Simulator\+::control\+Friendly (
+\begin{DoxyParamCaption}
+\item[{double}]{linear\+\_\+velocity, }
+\item[{double}]{angular\+\_\+velocity}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_adb1cff57466c3b03fd738036cb9cee63}{}\label{classSimulator_adb1cff57466c3b03fd738036cb9cee63}
+
+
+Update the linear and angular velocity of the friendly aircraft. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linear\+\_\+velocity} & The linear velocity of the aircraft. \\
+\hline
+{\em angular\+\_\+velocity} & The angular velocity of the aircraft.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ Will return false if the calculated gforce is more than 6G\textquotesingle{}s OR if the linear velocity is less than the terminal OR the linear velocity is more than the max. 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!distance@{distance}}
+\index{distance@{distance}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{distance(\+Global\+Ord o1, Global\+Ord o2)}{distance(GlobalOrd o1, GlobalOrd o2)}}]{\setlength{\rightskip}{0pt plus 5cm}static double Simulator\+::distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Global\+Ord}}]{o1, }
+\item[{{\bf Global\+Ord}}]{o2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_a1f33cdccada9c6cf034b9cf9d94e3d1e}{}\label{classSimulator_a1f33cdccada9c6cf034b9cf9d94e3d1e}
+
+
+Calculates the euclidean distance between two coordiantes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o1} & The first coordinate. \\
+\hline
+{\em o2} & The second coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double -\/ The distance between the two coordiantes. 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!elapsed@{elapsed}}
+\index{elapsed@{elapsed}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{elapsed(void)}{elapsed(void)}}]{\setlength{\rightskip}{0pt plus 5cm}long Simulator\+::elapsed (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_acd0a0ca3e9d25ea92ffc05e14b77c5e6}{}\label{classSimulator_acd0a0ca3e9d25ea92ffc05e14b77c5e6}
+
+
+Gets the elapsed time since the simulation started. 
+
+\begin{DoxyReturn}{Returns}
+long -\/ The elapsed time in milliseconds. 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!get\+Friendly\+Angular\+Velocity@{get\+Friendly\+Angular\+Velocity}}
+\index{get\+Friendly\+Angular\+Velocity@{get\+Friendly\+Angular\+Velocity}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{get\+Friendly\+Angular\+Velocity(void)}{getFriendlyAngularVelocity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double Simulator\+::get\+Friendly\+Angular\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_a054241a50cbf232b71acdaf4290855d3}{}\label{classSimulator_a054241a50cbf232b71acdaf4290855d3}
+
+
+Return the friendly aircraft\textquotesingle{}s angular velocity. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ The aircraft\textquotesingle{}s angular velocity (radians/second). 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!get\+Friendly\+Linear\+Velocity@{get\+Friendly\+Linear\+Velocity}}
+\index{get\+Friendly\+Linear\+Velocity@{get\+Friendly\+Linear\+Velocity}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{get\+Friendly\+Linear\+Velocity(void)}{getFriendlyLinearVelocity(void)}}]{\setlength{\rightskip}{0pt plus 5cm}double Simulator\+::get\+Friendly\+Linear\+Velocity (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_a17d07e629ef87450d91d960c2e6b231e}{}\label{classSimulator_a17d07e629ef87450d91d960c2e6b231e}
+
+
+Return the friendly aircraft\textquotesingle{}s linear velocity. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ The aircraft\textquotesingle{}s linear velocity (metres/second). 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!get\+Friendly\+Pose@{get\+Friendly\+Pose}}
+\index{get\+Friendly\+Pose@{get\+Friendly\+Pose}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{get\+Friendly\+Pose(void)}{getFriendlyPose(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pose} Simulator\+::get\+Friendly\+Pose (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_ab498029a37713969af417acfa7208d08}{}\label{classSimulator_ab498029a37713969af417acfa7208d08}
+
+
+Return the friendly aircraft\textquotesingle{}s pose. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structPose}{Pose} -\/ The aircraft\textquotesingle{}s x, y position (metres) and orientation (radians). 
+\end{DoxyReturn}
+\index{Simulator@{Simulator}!range\+To\+Bogie\+From\+Base@{range\+To\+Bogie\+From\+Base}}
+\index{range\+To\+Bogie\+From\+Base@{range\+To\+Bogie\+From\+Base}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{range\+To\+Bogie\+From\+Base(void)}{rangeToBogieFromBase(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Range\+Stamped} Simulator\+::range\+To\+Bogie\+From\+Base (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_abcd7cee64a0df0e4c5cbb3bbca719d16}{}\label{classSimulator_abcd7cee64a0df0e4c5cbb3bbca719d16}
+
+
+Returns the range from the base station to the bogie. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structRangeStamped}{Range\+Stamped} -\/ The range from bogie to base (metres), with a timestamp (milliseconds). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function will perform a sleep(\+B\+A\+S\+E\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+R\+A\+T\+E), to enforce the refresh rate of the friendly aircraft. 
+
+The timestamp uses the simulation epoch timer as a reference. 
+\end{DoxyNote}
+\index{Simulator@{Simulator}!range\+To\+Bogie\+From\+Friendly@{range\+To\+Bogie\+From\+Friendly}}
+\index{range\+To\+Bogie\+From\+Friendly@{range\+To\+Bogie\+From\+Friendly}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{range\+To\+Bogie\+From\+Friendly(void)}{rangeToBogieFromFriendly(void)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Range\+Stamped} Simulator\+::range\+To\+Bogie\+From\+Friendly (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_aa41aef7b8b1e79876dd5d05aef1376ae}{}\label{classSimulator_aa41aef7b8b1e79876dd5d05aef1376ae}
+
+
+Returns the range from the friendly aircraft to the bogie. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{structRangeStamped}{Range\+Stamped} -\/ The range from bogie to base (metres), with a timestamp (milliseconds). 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This function will perform a sleep(\+F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+R\+E\+S\+H\+\_\+\+R\+A\+T\+E), to enforce the refresh rate of the friendly aircraft. 
+
+The timestamp uses the simulation epoch timer as a reference. 
+\end{DoxyNote}
+\index{Simulator@{Simulator}!spawn@{spawn}}
+\index{spawn@{spawn}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{spawn(void)}{spawn(void)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::thread Simulator\+::spawn (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_a19ad57d2e32486e1cce2d8702060d930}{}\label{classSimulator_a19ad57d2e32486e1cce2d8702060d930}
+
+
+Returns the simulation thread. 
+
+\begin{DoxyNote}{Note}
+This thread will terminate if {\ttfamily \hyperlink{classSimulator_ae88ecc16eb03836e8b4a355836d7500b}{stop()}} is called OR, the user has not supplied control to the friendly aircraft within a timely manner 
+\end{DoxyNote}
+\index{Simulator@{Simulator}!test\+Pose@{test\+Pose}}
+\index{test\+Pose@{test\+Pose}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{test\+Pose(\+Pose pose)}{testPose(Pose pose)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simulator\+::test\+Pose (
+\begin{DoxyParamCaption}
+\item[{{\bf Pose}}]{pose}
+\end{DoxyParamCaption}
+)}\hypertarget{classSimulator_a29cf802d6785897f2e5c134a7f440398}{}\label{classSimulator_a29cf802d6785897f2e5c134a7f440398}
+
+
+Will render a test aircraft within the airspace. 
+
+Callers may use this method to draw an additional aircraft within the airspace for testing purposes. It will stay on screen for 1 second.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pose} & The pose to display. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Simulator@{Simulator}!A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}}
+\index{A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE@{A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE}{AIRSPACE_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}const double Simulator\+::\+A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_af702e54e90c0fecb27f270890d41442c}{}\label{classSimulator_af702e54e90c0fecb27f270890d41442c}
+The airspace size is (A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE x A\+I\+R\+S\+P\+A\+C\+E\+\_\+\+S\+I\+ZE) in metres \index{Simulator@{Simulator}!B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC@{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC}}
+\index{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC@{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC}{BSTATION_LOC}}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Global\+Ord} Simulator\+::\+B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+L\+OC\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_a4a32de8a20938532139a6746499d7285}{}\label{classSimulator_a4a32de8a20938532139a6746499d7285}
+The location of the base station \index{Simulator@{Simulator}!B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE@{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}}
+\index{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE@{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}{BSTATION_REF_RATE}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int Simulator\+::\+B\+S\+T\+A\+T\+I\+O\+N\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_a901e2a4bee11e07d7276857f95e88f50}{}\label{classSimulator_a901e2a4bee11e07d7276857f95e88f50}
+The rate (milliseconds) at which the base station produces range to bogie \index{Simulator@{Simulator}!F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE@{F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}}
+\index{F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE@{F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE}{FRIENDLY_REF_RATE}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int Simulator\+::\+F\+R\+I\+E\+N\+D\+L\+Y\+\_\+\+R\+E\+F\+\_\+\+R\+A\+TE\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_a6ed76930f7f1efb8396ffd05189ed000}{}\label{classSimulator_a6ed76930f7f1efb8396ffd05189ed000}
+The rate (milliseconds) at which the friendly produces range to bogie \index{Simulator@{Simulator}!M\+A\+X\+\_\+G@{M\+A\+X\+\_\+G}}
+\index{M\+A\+X\+\_\+G@{M\+A\+X\+\_\+G}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+G}{MAX_G}}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int Simulator\+::\+M\+A\+X\+\_\+G\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_a798658490c9deedf3eeb62278308d2b3}{}\label{classSimulator_a798658490c9deedf3eeb62278308d2b3}
+The maximum g-\/force \index{Simulator@{Simulator}!M\+A\+X\+\_\+V@{M\+A\+X\+\_\+V}}
+\index{M\+A\+X\+\_\+V@{M\+A\+X\+\_\+V}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+V}{MAX_V}}]{\setlength{\rightskip}{0pt plus 5cm}const double Simulator\+::\+M\+A\+X\+\_\+V\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_ad97409c332a5e261056ee47b84ba5e72}{}\label{classSimulator_ad97409c332a5e261056ee47b84ba5e72}
+The maximum velocity (m/s) \index{Simulator@{Simulator}!V\+\_\+\+T\+E\+RM@{V\+\_\+\+T\+E\+RM}}
+\index{V\+\_\+\+T\+E\+RM@{V\+\_\+\+T\+E\+RM}!Simulator@{Simulator}}
+\subsubsection[{\texorpdfstring{V\+\_\+\+T\+E\+RM}{V_TERM}}]{\setlength{\rightskip}{0pt plus 5cm}const double Simulator\+::\+V\+\_\+\+T\+E\+RM\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classSimulator_ad903010cfc404794ecfbb2f8903b15ae}{}\label{classSimulator_ad903010cfc404794ecfbb2f8903b15ae}
+Terminal velocity (m/s) 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/user/git/pfms-\/2019a-\/\+Johnson15177/scratch/assignment/a3/attempt/lib/\hyperlink{simulator_8h}{simulator.\+h}\end{DoxyCompactItemize}

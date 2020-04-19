@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/martin/pms/pfms-2019a-MartinLym/quizzes/quiz3/c/data_race.cpp
+iostream
+-
+thread
+-
+vector
+-
+

@@ -1,0 +1,64 @@
+\hypertarget{classRangerFusion}{}\section{Ranger\+Fusion Class Reference}
+\label{classRangerFusion}\index{Ranger\+Fusion@{Ranger\+Fusion}}
+
+
+\hyperlink{classRangerFusion}{Ranger\+Fusion} derived class of \hyperlink{classRangerFusionInterface}{Ranger\+Fusion\+Interface}.  
+
+
+
+
+{\ttfamily \#include $<$rangerfusion.\+h$>$}
+
+Inheritance diagram for Ranger\+Fusion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classRangerFusion}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classRangerFusion_a01909c08b2a974e68b031056db730aba}{set\+Rangers} (std\+::vector$<$ \hyperlink{classRangerInterface}{Ranger\+Interface} $\ast$ $>$ rangers)\hypertarget{classRangerFusion_a01909c08b2a974e68b031056db730aba}{}\label{classRangerFusion_a01909c08b2a974e68b031056db730aba}
+
+\begin{DoxyCompactList}\small\item\em stores the sensor objects inside the vector \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{classRangerFusion_a5780383fdffe121a7a2372a047819ba9}{get\+Raw\+Range\+Data} ()\hypertarget{classRangerFusion_a5780383fdffe121a7a2372a047819ba9}{}\label{classRangerFusion_a5780383fdffe121a7a2372a047819ba9}
+
+\begin{DoxyCompactList}\small\item\em generates the data for each sensor and the fused vector as well \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classRangerFusion_a2d68f0291653a422603ea9c8f2e33c21}{get\+Fused\+Range\+Data} ()\hypertarget{classRangerFusion_a2d68f0291653a422603ea9c8f2e33c21}{}\label{classRangerFusion_a2d68f0291653a422603ea9c8f2e33c21}
+
+\begin{DoxyCompactList}\small\item\em returns the fused vector \end{DoxyCompactList}\item 
+void \hyperlink{classRangerFusion_a1fc8c1b4a4e07225a2d51bc444ce049f}{set\+Fusion\+Method} (Fusion\+Method)\hypertarget{classRangerFusion_a1fc8c1b4a4e07225a2d51bc444ce049f}{}\label{classRangerFusion_a1fc8c1b4a4e07225a2d51bc444ce049f}
+
+\begin{DoxyCompactList}\small\item\em provides calculations of each method of min, max and average, replaces fused vector with values depending on the method chosen \end{DoxyCompactList}\item 
+bool \hyperlink{classRangerFusion_a49b3a2346c2d047274a3ad445a05b66f}{take\+Input} (unsigned int input)\hypertarget{classRangerFusion_a49b3a2346c2d047274a3ad445a05b66f}{}\label{classRangerFusion_a49b3a2346c2d047274a3ad445a05b66f}
+
+\begin{DoxyCompactList}\small\item\em sets the method to be used \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classRangerFusion}{Ranger\+Fusion} derived class of \hyperlink{classRangerFusionInterface}{Ranger\+Fusion\+Interface}. 
+
+This is the derived class of \hyperlink{classRangerFusionInterface}{Ranger\+Fusion\+Interface}.~\newline
+\begin{DoxyAuthor}{Author}
+Johnsonn Nguyen 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+none 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000005}{Bug}]none reported as of 2019-\/04-\/23 \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/user/git/pfms-\/2019a-\/\+Johnson15177/scratch/assignment/a2attempt2/rangerfusion.\+h\item 
+/home/user/git/pfms-\/2019a-\/\+Johnson15177/scratch/assignment/a2attempt2/rangerfusion.\+cpp\end{DoxyCompactItemize}

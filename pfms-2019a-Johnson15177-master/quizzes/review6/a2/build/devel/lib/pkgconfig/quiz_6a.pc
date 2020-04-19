@@ -1,0 +1,8 @@
+prefix=/home/user/Documents/PMS/pfms-2019a-jeffviray/quizzes/quiz6/a/build/devel
+
+Name: quiz_6a
+Description: Description of quiz_6a
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/user/Documents/PMS/pfms-2019a-jeffviray/quizzes/quiz6/a/build/devel/lib 
+Requires: 

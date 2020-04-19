@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: quiz_6a
+Description: Description of quiz_6a
+Version: 0.0.0
+Cflags: 
+Libs: -L/usr/local/lib 
+Requires: 

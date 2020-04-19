@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/assignment1.dir/matrix.cpp.o  -o assignment1 -rdynamic 
