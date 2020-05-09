@@ -1,0 +1,280 @@
+#include <thread>
+#include <vector>
+#include <iostream>
+#include <deque>
+#include <condition_variable>
+#include <queue>
+#include "simulator.h"
+#include "seek.h"
+
+#define BUFFER 10
+
+
+//For example purposes only, this thread gets the friendly aircraft's
+//(red triangle) pose every 4 seconds. It plots this pose on the
+//simulation (blue triangle) which stays on the image for 1 second, as per the
+//'testPose()' documentation in the simualtor class.
+void exampleThread(const std::shared_ptr<Simulator> & sim) {
+  while(true) {
+    //Get the friendly aircraft's position and orientation
+    Pose pose = sim->getFriendlyPose();
+    sim->testPose(pose);
+
+    std::cout << "[" << sim->elapsed() / 1000 << "s]" << std::endl;
+    std::cout << "Friendly {x, y, orientation}:"<< std::endl;
+    std::cout << "  - x: " << pose.position.x << "m" << std::endl;
+    std::cout << "  - y: " << pose.position.y << "m" << std::endl;
+    std::cout << "  - orient: " << pose.orientation << " radians" << std::endl << std::endl;
+    std::this_thread::sleep_for(std::chrono::seconds(4));
+  }
+}
+
+void purePersuit(Pose currentPose, GlobalOrd targetPoint, float & velocity, float & angularVelocity){
+  std::cout << "friendly x: " << currentPose.position.x << std::endl;
+  std::cout << "friendly y: " << currentPose.position.y << std::endl;
+  std::cout << "friendly orientation: " << currentPose.orientation << std::endl;
+  std::cout << "target x:" << targetPoint.x << std::endl;
+  std::cout << "target y:" << targetPoint.y << std::endl;
+
+  GlobalOrd currentPoint = currentPose.position;
+  GlobalOrd relativeEnemyPos;
+  relativeEnemyPos.x = targetPoint.x-currentPoint.x;
+  relativeEnemyPos.y = targetPoint.y-currentPoint.y;
+
+  float theta = currentPose.orientation;// - 3.141592f / 2;
+  float distanceSqrd = (relativeEnemyPos.x) * (relativeEnemyPos.x) + (relativeEnemyPos.y) * (relativeEnemyPos.y);
+  float distance = std::sqrt(distanceSqrd);
+  float angle = 0;
+  if(targetPoint.x > currentPoint.x){ // need condition  for =
+     angle = std::asin(relativeEnemyPos.y/distance) - theta;
+  }
+  else{
+     angle = 3.1415f - std::asin(relativeEnemyPos.y/distance) - theta;
+  }
+  
+  float xOffsetRelative = distance * -std::cos((3.141592f / 2) - angle);//targetPoint.x - currentPoint.x;
+  float gamma = (2.0f * xOffsetRelative) / distanceSqrd;
+   velocity = std::sqrt(6*9.81/std::abs(gamma));
+   angularVelocity = -velocity * gamma;
+  std::cout << "---------------------------" << std::endl;
+  std::cout << "theta: " << theta << std::endl;
+  std::cout << "distance: " << distance << std::endl;
+  std::cout << "angle: " << angle << std::endl;
+  std::cout << "xOffsetRelative: " << xOffsetRelative << std::endl;
+  std::cout << "gamma: " << gamma << std::endl;
+  std::cout << "velocity: " << velocity << std::endl;
+  std::cout << "angularVelocity: " << angularVelocity << std::endl;
+  std::cout << "g's: " << (velocity*angularVelocity/9.81f) << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
+  std::cout << std::endl;
+  
+}
+
+void displayPoints(const std::shared_ptr<Simulator> & sim, AircraftContainer& friendly,std::vector<long>& baseCompare, std::vector<long>& friendCompare, Pose& correctPose){
+    Seek seek;
+    Pose bogie0;
+    Pose bogie1;
+    while(true){
+        friendly.a.pose = sim->getFriendlyPose();
+        while(!baseCompare.empty() && !friendCompare.empty()){
+            seek.circle_circle_intersection(friendly.a.pose.position, sim->BSTATION_LOC, friendCompare[1], baseCompare[1], bogie0, bogie1);
+            sim->testPose(correctPose);
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+    }
+}
+
+void controlThread(const std::shared_ptr<Simulator> & sim, std::condition_variable& cv2, std::mutex& mtx,AircraftContainer& friendly,std::vector<long>& baseCompare, std::vector<long>& friendCompare, Pose& correctPose) {
+    Seek seek;
+    Pose bogie0;
+    Pose bogie1;
+
+    double curvature = 0.0;
+    double angVelocity = 0.0;
+    double linVelocity = 0.0;
+
+    double vectorOrientation = 0.0;
+    double offset = 0.0;
+    double x = 0.0;
+    double y = 0.0;
+    double angVel = 0.0;
+    double bogieOrientation0 = 0.0;
+    double bogieOrientation1 = 0.0;
+    std::deque<double> xPosition0;
+    std::deque<double> yPosition0;
+    std::deque<double> xPosition1;
+    std::deque<double> yPosition1;
+
+    std::deque<double> checkOrientation0;
+    std::deque<double> checkOrientation1;
+    std::deque<double> checkDistance0;
+    std::deque<double> checkDistance1;
+
+    GlobalOrd target;
+  while(true){
+    //Feed the watchdog control timer
+    while(!baseCompare.empty() && !friendCompare.empty()){
+        std::cout << "Synched Data1:   " << "Base: " << baseCompare[0] << "= " << baseCompare[1] << "    Friend: " << friendCompare[0] << "= " << friendCompare[1] << std::endl;
+        
+        seek.circle_circle_intersection(friendly.a.pose.position, sim->BSTATION_LOC, friendCompare[1], baseCompare[1], bogie0, bogie1);
+        std::cout << "x0:  " << bogie0.position.x << "  y0: " << bogie0.position.y << std::endl;
+        std::cout << "x1:  " << bogie1.position.x << "  y1: " << bogie1.position.y << std::endl;
+        xPosition0.push_front(bogie0.position.x);
+        yPosition0.push_front(bogie0.position.y);
+        xPosition1.push_front(bogie1.position.x);
+        yPosition1.push_front(bogie1.position.y);
+
+        vectorOrientation = atan2(bogie1.position.y - friendly.a.pose.position.y, bogie1.position.x - friendly.a.pose.position.x);
+        std::cout << "VectorOrientation: " << vectorOrientation << std::endl;
+        
+        while(xPosition0.size() == 2 && yPosition0.size() == 2){
+            double distance0 = sqrt(pow(xPosition0.front()-xPosition0.back(), 2)+ pow(yPosition0.front()-yPosition0.back(), 2));
+            double distance1 = sqrt(pow(xPosition1.front()-xPosition1.back(), 2)+ pow(yPosition1.front()-yPosition1.back(), 2));
+
+            if(distance0 < distance1){
+                correctPose = bogie0;
+                correctPose.orientation = bogieOrientation0;
+            } else if(distance1 < distance0){
+                correctPose = bogie1;
+                correctPose.orientation = bogieOrientation1;
+            }
+
+            bogieOrientation0 = atan2(yPosition0.front() - yPosition0.back(), xPosition0.front() - xPosition0.back());
+            bogieOrientation1 = atan2(yPosition1.front() - yPosition1.back(), xPosition1.front() - xPosition1.back());
+
+            if(bogieOrientation1 <= 0){
+                bogieOrientation1 = 2*M_PI - fabs(bogieOrientation1);
+            }
+            if(bogieOrientation0 <= 0){
+                bogieOrientation0 = 2*M_PI - fabs(bogieOrientation0);
+            }
+            checkOrientation0.push_front(bogieOrientation0);
+            checkOrientation1.push_front(bogieOrientation1);
+            std::cout << "distance0: " << distance0 << "   distance1: " << distance1 << std::endl;
+            std::cout << "bogieOrientation0: " << bogieOrientation0 << "     bogieOrientation1: " << bogieOrientation1 << std::endl;
+            xPosition0.clear();
+            yPosition0.clear();
+            xPosition1.clear();
+            yPosition1.clear();
+        }
+        
+
+        baseCompare.clear();
+        friendCompare.clear();
+        
+        std::cout << "/////////////////" << std::endl << std::endl; 
+    }    
+    
+   
+    sim->controlFriendly(50, angVel);
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));    
+  }
+}
+
+void showData(const std::shared_ptr<Simulator> & sim, std::condition_variable& cv, std::condition_variable& cv1, std::condition_variable& cv2,std::deque<RangeStamped>& friendlyContainer, std::deque<RangeStamped>& baseContainer,AircraftContainer& friendly, std::vector<double>& timeFriend, std::vector<double>& rangeFriend, std::vector<long>& baseCompare, std::vector<long>& friendCompare){
+    while(true){
+        {
+            std::unique_lock<std::mutex> locker(friendly.access);
+            cv1.wait(locker);
+            //std::cout << "Base: " << baseContainer.front().timestamp << " : " << baseContainer.front().range << std::endl;
+            baseCompare.push_back(baseContainer.front().timestamp);
+            baseCompare.push_back(baseContainer.front().range);
+            cv2.wait(locker);
+            for(int i= 0; i <= timeFriend.size() -1; i++){
+                //std::cout << timeFriend[i] << " : " << rangeFriend[i] << std::endl;
+                if(timeFriend[i] == baseCompare[0]){
+                    friendCompare.push_back(timeFriend[i]);
+                    friendCompare.push_back(rangeFriend[i]); 
+                }
+            }
+            timeFriend.clear();
+            rangeFriend.clear();
+        }
+    }
+}
+
+double interpolate(long xL, long xR, double yL, double yR, double x, bool extrapolate){
+    if ( !extrapolate )                                                         
+    {
+        if ( x < xL ) yR = yL;
+        if ( x > xR ) yL = yR;
+    }
+    double dydx = ( yR - yL ) / ( xR - xL );                                   
+    return yL + dydx * ( x - xL );       
+}
+
+void rangeBaseToBogie(const std::shared_ptr<Simulator> & sim, std::condition_variable& cv, std::condition_variable& cv1, AircraftContainer& friendly, std::deque<RangeStamped>& baseContainer){
+    RangeStamped baseToBogie;
+    while(true){
+        baseToBogie = sim->rangeToBogieFromBase();
+        std::unique_lock<std::mutex> locker(friendly.access);
+        cv.notify_all();
+        baseContainer.push_front(baseToBogie);
+        cv1.notify_all();
+        if(baseContainer.size() == BUFFER){
+            baseContainer.pop_back();
+        }
+    }
+}
+
+void rangeFriendlyToBogie(const std::shared_ptr<Simulator>& sim, std::condition_variable& cv, std::condition_variable& cv2,AircraftContainer& friendly, std::deque<RangeStamped>& friendlyContainer, std::vector<double>& timeFriend, std::vector<double>& rangeFriend){
+    RangeStamped friendlyToBogie;
+
+    while(true){
+        friendlyToBogie = sim->rangeToBogieFromFriendly();
+        std::unique_lock<std::mutex> locker(friendly.access);
+        
+        friendlyContainer.push_front(friendlyToBogie);
+        
+        if(friendlyContainer.size() == BUFFER){            
+            RangeStamped x = friendlyContainer.front();
+            RangeStamped y = friendlyContainer.at(1);
+            for(int i = y.timestamp; i <= x.timestamp; i++){
+                timeFriend.push_back(i);
+            }
+            for(double j : timeFriend){
+                rangeFriend.push_back(interpolate(y.timestamp, x.timestamp, y.range,x.range, j, true));
+            }
+            cv.wait(locker);
+            cv2.notify_all();
+            friendlyContainer.clear(); 
+        }
+    }
+}
+
+int main(void)
+{
+    std::vector<std::thread> threads;
+    AircraftContainer friendly;
+    std::mutex mtx;
+    Pose correctBogie;
+
+    std::vector<long> baseCompare;
+    std::vector<long> friendCompare;
+    std::deque<RangeStamped> friendlyContainer;
+    std::vector<double> timeFriend;
+    std::vector<double> rangeFriend;
+    std::deque<RangeStamped> baseContainer(BUFFER);
+
+    std::condition_variable cv;
+    std::condition_variable cv1;
+    std::condition_variable cv2;
+
+    //Create a shared pointer for the simulator class
+    std::shared_ptr<Simulator> sim(new Simulator());
+    threads.push_back(sim->spawn());
+    threads.push_back(std::thread(controlThread, sim, std::ref(cv1), std::ref(mtx),std::ref(friendly), std::ref(baseCompare), std::ref(friendCompare), std::ref(correctBogie)));
+    //threads.push_back(std::thread(exampleThread, sim));
+    threads.push_back(std::thread(rangeFriendlyToBogie, sim, std::ref(cv), std::ref(cv2),std::ref(friendly), std::ref(friendlyContainer), std::ref(timeFriend), std::ref(rangeFriend)));
+    threads.push_back(std::thread(rangeBaseToBogie, sim, std::ref(cv), std::ref(cv1),std::ref(friendly), std::ref(baseContainer)));
+    threads.push_back(std::thread(showData, sim, std::ref(cv), std::ref(cv1), std::ref(cv2),std::ref(friendlyContainer), std::ref(baseContainer),std::ref(friendly), std::ref(timeFriend), std::ref(rangeFriend), std::ref(baseCompare), std::ref(friendCompare)));
+    threads.push_back(std::thread(displayPoints, sim, std::ref(friendly), std::ref(baseCompare), std::ref(friendCompare), std::ref(correctBogie)));
+
+    //Join threads and begin!
+    for(auto & t: threads){
+        t.join();
+    }
+
+  return 0;
+}
